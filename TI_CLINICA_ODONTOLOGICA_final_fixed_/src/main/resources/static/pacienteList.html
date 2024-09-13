@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Lista de Pacientes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Agregar nuevo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/pacienteList.html">Listar todos</a>
+        </li>
+    </ul>
+
+    <h1>Lista de Pacientes</h1>
+
+    <!-- Campo de búsqueda -->
+    <input type="text" id="searchField" placeholder="Buscar paciente..." class="form-control mb-3">
+
+    <div class="row col-md-6 table-responsive">
+        <table id="pacienteTable" class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody id="pacienteTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-sm-6" id="div_paciente_updating" style="display:none; background-color:#e6fffa; padding:10px; border-radius:3px">
+        <h3>Modificar Paciente</h3>
+        <form id="update_paciente_form">
+            <div class="form-group">
+                <label>ID:</label>
+                <input type="text" class="form-control" id="paciente_id" readonly>
+            </div>
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <label>Apellido:</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+            </div>
+            <div class="form-group">
+                <label>DNI:</label>
+                <input type="text" class="form-control" id="dni" placeholder="DNI">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        </form>
+    </div>
+
+    <hr>
+    <a href="pacienteAlta.html" class="btn btn-success">Agregar Paciente</a>
+    <a href="/index.html" class="btn btn-primary">Regresar a Inicio</a>
+</div>
+
+<script type="text/javascript" src="/js/get_paciente.js"></script>
+</body>
+</html>

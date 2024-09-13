@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Turnos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Agregar nuevo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/turnoList.html">Listar todos</a>
+        </li>
+    </ul>
+
+    <div id="div_turno_table">
+        <h1>Turnos</h1>
+        <div class="row col-md-6 table-responsive">
+            <table id="turnoTable" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha y Hora</th>
+                    <th>Paciente</th>
+                    <th>Odontólogo</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody id="turnoTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6" style="display: none; background-color:#e6fffa; padding:10px; border-radius:3px" id="div_turno_updating">
+            <form id="update_turno_form">
+                <div class="form-group">
+                    <label>ID:</label>
+                    <input type="text" class="form-control" id="turno_id" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Fecha y Hora:</label>
+                    <input type="datetime-local" class="form-control" id="fechaHora">
+                </div>
+                <div class="form-group">
+                    <label>Paciente:</label>
+                    <input type="text" class="form-control" id="paciente">
+                </div>
+                <div class="form-group">
+                    <label>Odontólogo:</label>
+                    <input type="text" class="form-control" id="odontologo">
+                </div>
+
+
+            </form>
+            <div id="response" style="display:none; margin:10px"></div>
+        </div>
+    </div>
+    <hr>
+    <a href="turnoAlta.html" class="btn btn-success">Agregar Turno</a>
+    <a href="/index.html" class="btn btn-primary">Regresar a Inicio</a>
+</div>
+<script type="text/javascript" src="/js/get_turno.js"></script>
+</body>
+</html>
